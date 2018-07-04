@@ -1,17 +1,17 @@
 A combination of https://hub.docker.com/r/certbot/certbot and https://github.com/hsmade/certbot-dns-transip
 
 Usage
------
+===
 
 Folder structure on host machine
-====
+----
 Create the following folders on your host machine:
 * `/etc/letsencrypt`
 * `/var/lib/letsencrypt`
 * `/var/log/letsencrypt`
 
 TransIP login information
-====
+----
 Make sure you have your TransIP username and an API key. Save the API key in RSA format as `/etc/letsencrypt/transip.key`. Make sure to `chmod` it to the correct setting for security!
 
 **NOTE: the key must be in RSA format!**
@@ -21,7 +21,7 @@ To create an RSA key from the key you get from TransIP (which is OpenSSL standar
 `openssl rsa -in transip_original.key -out transip_rsa.key`
 
 `/etc/letsencrypt/transip.ini`
-=====
+----
 Create the file `/etc/letsencrypt/transip.ini` with the following content (replace `my_username` with your own):
 
 ```
@@ -30,7 +30,7 @@ certbot_dns_transip:dns_transip_key_file = /etc/letsencrypt/transip.key
 ```
 
 Using certbot
------
+====
 Use it as you usually would, but then as follows:
 
 ```sh
