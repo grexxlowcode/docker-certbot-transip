@@ -1,5 +1,7 @@
 A combination of https://hub.docker.com/r/certbot/certbot and https://github.com/hsmade/certbot-dns-transip
 
+Can be found on the Docker Hub at https://hub.docker.com/r/grexx/certbot-transip/
+
 Usage
 ===
 
